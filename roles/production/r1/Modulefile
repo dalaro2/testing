@@ -2,3 +2,5 @@ name 'dalaro2-r1'
 version '0.0.0'
 
 dependency 'dalaro/titan', '>=0.0.2'
+dependency 'puppetlabs/apt', '>=1.2.0'
+dependency 'puppetlabs/stdlib', '>=4.1.0'
