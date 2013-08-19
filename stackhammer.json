@@ -12,7 +12,7 @@
         {
           "type": "M1_LARGE",
           "deployState": "RUNNING",
-          "image": "ami-90374bf9",
+          "image": "ami-570f603e",
           "role": "r1",
           "name": "titantest"
         }
