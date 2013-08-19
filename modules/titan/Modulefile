@@ -1,0 +1,8 @@
+name         'dalaro-titan'
+version      '0.0.2'
+summary      'Install and run the Titan graph database using Aurelius packages'
+description  'Install and run the Titan graph database using Aurelius packages'
+dependency   'puppetlabs/stdlib', '>= 3.0.0'
+dependency   'puppetlabs/apt',    '>= 1.2.0'
+license      'Apache 2.0'
+author       'Dan LaRocque'

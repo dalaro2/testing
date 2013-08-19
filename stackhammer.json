@@ -1,0 +1,27 @@
+{
+  "metaVersion": "1.1.6",
+  "accessKey": "Aurelius",
+  "puppetVersion": "PUPPET27",
+  "environments": [
+    {
+      "siteLocation": "manifests",
+      "moduleLocations": [
+        "modules"
+      ],
+      "nodes": [
+        {
+          "type": "M1_LARGE",
+          "deployState": "RUNNING",
+          "image": "ami-90374bf9",
+          "publicKeys": [
+            "AAAAB3NzaC1yc2EAAAADAQABAAABAQC5GSFWKff3KRJCzZCPeN6vQqBBTM1rNcKaQ1Gnfj66AnOlmpXsnTktA/V4pGRgOjHuvdH3epjzcnwy+DQsUOCODJzIM6iG7XvrbSJoZ3w5zI5obZCfwrrNnPFE7iWbmfFoQWwqW3VYJla93J3lDF+x0rBOSRJfan+R/JWh2P/zBiiXB8zO1yjwBFiwmZVyjw7PqcEsekfog/3PjR9YU+2qi7/1NbOGwbGvtr9VDHmsx/GVbxJrucsv8IaTMi/TjwYYAdj7WXlF175Y5iofC7nSNIaBUSpAq7QTikUNQLyIGnZzI543SarSLeDj0IO0zdDTpcnjwIVMV9bzEVnMBvkD"
+          ],
+          "role": "r1",
+          "name": "titantest"
+        }
+      ],
+      "name": "production"
+    }
+  ],
+  "puppetLintEnabled": false
+}

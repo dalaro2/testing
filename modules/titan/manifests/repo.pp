@@ -1,0 +1,46 @@
+class titan::repo( $repotype = undef, $keyserver = 'pgp.mit.edu' ) {
+
+    $repohost = 'http://aureliuspkg.s3-website-us-east-1.amazonaws.com'
+#    $keyid = '617B3B80' # dalaro@hopcount.org
+    $keyid = '25AC7920' # Aurelius
+    $keyurl = "${repohost}/keys/aurelius.asc"
+
+    if undef == $repotype { # attempt to autodetect
+        case $::osfamily {
+	   'RedHat': { $resolved_repotype = 'rpm' }
+	   'Debian': { $resolved_repotype = 'deb' }
+	}
+    } else {
+        $resolved_repotype = $repotype
+    }
+
+    if 'deb' == $resolved_repotype {
+        class { 'apt':
+		# Not sure if this is really necessary, but I know Ubuntu 12.04
+		# needs an apt-get update before apt-get can install anything.
+		always_apt_update => true,
+	}
+
+	#apt::key { 'dalaro':
+	#	key => "${keyid}",
+	#	key_server => "${keyserver}",
+	#}
+
+	apt::source { 'aureliusaptrepo':
+		location => "${repohost}/deb",
+		release => 'aurelius', # a.k.a. "component" in Debian's docs
+		repos => 'main',
+		key => "${keyid}",
+		key_server => "${keyserver}",
+		include_src => false,
+	}
+    } else { # rpm is the only other supported type besides deb
+        yumrepo { 'aureliusyumrepo':
+            baseurl => "${repohost}/rpm",
+	    descr => 'Aurelius LLC Software (http://www.thinkaurelius.com/)',
+	    gpgcheck =>  1,
+	    gpgkey => "${keyurl}",
+	    name => 'aurelius',
+	}
+    }
+}

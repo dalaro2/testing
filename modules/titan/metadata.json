@@ -1,0 +1,34 @@
+{
+  "checksums": {
+    "manifests/repo.pp": "d7957267581a67c9a29076e7e6b95dab",
+    "manifests/init.pp": "9402176c9d517bd00467eed46126a0ba",
+    "manifests/repo.pp~": "dfe010b8f8bf99021fc99926d24a89cb",
+    "templates/titan.properties.erb": "679abdf3ac2a821d32a6b01103c8a314",
+    "CHANGELOG": "f1c2db7054f4e3d21f35e4225ebbbf25",
+    "templates/cassandra.yaml.erb": "0e4b151f6b90bf1e460af3e67f4b4d8a",
+    "LICENSE": "7fa6a71e20668de43af7602904636490",
+    "README.md": "16a91824befc2b12d53d1e2106b6f9cc",
+    "Modulefile": "4c7fa88118f440bf6e80249f40c63d7f"
+  },
+  "types": [
+
+  ],
+  "project_page": "UNKNOWN",
+  "source": "UNKNOWN",
+  "license": "Apache 2.0",
+  "dependencies": [
+    {
+      "name": "puppetlabs/stdlib",
+      "version_requirement": ">= 3.0.0"
+    },
+    {
+      "name": "puppetlabs/apt",
+      "version_requirement": ">= 1.2.0"
+    }
+  ],
+  "summary": "Install and run the Titan graph database using Aurelius packages",
+  "author": "Dan LaRocque",
+  "name": "dalaro-titan",
+  "description": "Install and run the Titan graph database using Aurelius packages",
+  "version": "0.0.2"
+}
